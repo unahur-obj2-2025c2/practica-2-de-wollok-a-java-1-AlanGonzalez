@@ -40,9 +40,15 @@ public abstract class Dron {
     public abstract boolean esAvanzadoSegunTipo();
 
     public double eficienciaOperativa() {
-        return this.autonomia * 10 + misionEnLaCiudad.eficienciaOperativa();
+        return this.autonomia * 10 + misionEnLaCiudad.calcularExtra();
     }
 
+    public boolean esAvanzado() {
+        return this.esAvanzadoSegunTipo() || this.esAvanzadoSegunMision();
+    }
 
+    public boolean esAvanzadoSegunMision(){
+        return this.getMisionEnLaCiudad().esAvanzadoUnDron(this);
+    }
     
 }
