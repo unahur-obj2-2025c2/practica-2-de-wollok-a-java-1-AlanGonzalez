@@ -1,4 +1,4 @@
-package me.Sensores.Escuadrones;
+package me.gonzager.ex.operaciones.Sensores.Escuadrones;
 
 public class Sensor {
     private Integer capacidad;
